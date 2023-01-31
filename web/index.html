@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Style.css"/>
+        
+    </head>
+    <body>
+    <center><h1>ID Card Maker</h1></center>
+    
+    <div class ="card">
+        <div class="container">
+            <div class="image"><img src="tree.png" alt="Logo" style="width:80px"></div>
+            <h3 class="text">
+                கற்போம் கற்பிப்போம் கல்வி இயக்கம்        
+            </h3>
+            <div class="image"><img src="books.png" alt="Logo" style="width:80px"></div>
+        </div>
+        <hr>
+        <div class ="image-preview-container">
+            <div class ="preview">
+                <img id="preview-selected-image"/>
+            </div>
+            <label for="file-upload">Upload Image</label>
+            <input type="file" id="file-upload" accept="image/*" onchange="previewImage(event);"/>
+        </div><br>
+        <center><form>
+            <label for="regno">Reg.No</label>
+            <input type="text" id="regno" name="regno"><br>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name"><br>
+            <label for="date">D.O.B</label>
+            <input type="date" id="date" name="date"><br>
+            <label for="vname">Village</label>
+            <input type="text" id="vname" name="vname"><br>
+            <label for="dist">District</label>
+            <input type="text" id="dist" name="dist"><br>
+            <!--<div class="smt"><input type="submit" id="preview" value="CREATE"></div>-->
+            </form></center>
+        <center><div class="pb">
+                <button type="submit" id="preview">Preview</button> 
+                <button id="down">Download</button>
+            </div>
+        </center> 
+    </div>
+    <div class="container">
+    <canvas class="idcard" id="result">
+        <div class="container">
+            <div class="image"><img src="tree.png" id="tree" alt="Logo" style="width:80px"></div>
+            <h3 class="text">
+                கற்போம் கற்பிப்போம் கல்வி இயக்கம்        
+            </h3>
+            <div class="image"><img src="books.png" id="books" alt="Logo" style="width:80px"></div>
+        </div><hr>
+        <div class="content">
+            <img src="" id="imgDisplayed">
+            <ul>
+                <li id="regnos"></li>
+                <li id="names"></li>
+                <li id="dob"></li>
+                <li id="village"></li>
+                <li id="district"></li>
+            </ul>
+        </div>    
+    </canvas>
+    <!--<div class="dbtn">
+        <div class="center">
+            
+        </div>
+    </div>-->
+    </div>
+    <script src="jsfile.js"></script>
+    </body>
+</html>
